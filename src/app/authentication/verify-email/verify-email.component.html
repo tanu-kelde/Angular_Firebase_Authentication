@@ -1,0 +1,23 @@
+<div class="displayTable display">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <p-image class="center" src="../../../assets/images/mail.webp" alt="Image" width="130"></p-image>
+
+        <h3 >Thank You for Registering</h3>
+        <div class="formGroup" *ngIf="authService.userData as user">
+          <p class="text-center">We have sent a confirmation email to <strong style="color: rgb(27, 165, 183);">{{user.email}}</strong>.Please check your email and click on the link to verfiy your email address.</p>
+        </div>
+        
+        <!-- Calling SendVerificationMail() method using authService Api -->
+        <div class="formGroup">
+          <button type="button" class="btn btnPrimary" (click)="authService.sendVerificationMail()" style="border:1px solid black ;">
+            <i class="fas fa-redo-alt"></i>
+            Resend Verification Email
+          </button>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span>Go back to?<span class="redirect" routerLink="/sign-in"> Sign in</span></span>
+      </div>
+    </div>
+  </div>
