@@ -1,57 +1,55 @@
 <div class="main">
-    <h1>Edit Student Details</h1>
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>FirstName</mat-label>
-            <input formControlName="firstName" matInput placeholder="FirstName">
-            <mat-error *ngIf="f['firstName'].errors && f['firstName'].touched">
-              Please enter a valid FirstName
-            </mat-error>
-          </mat-form-field>
-        </div>
+  <h1>Edit Student Details</h1>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>FirstName</mat-label>
+          <input formControlName="firstName" matInput placeholder="FirstName">
+          <mat-error *ngIf="f['firstName'].errors && f['firstName'].touched">
+            Please enter a valid FirstName
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>LastName</mat-label>
-            <input formControlName="lastName" matInput placeholder="LastName">
-            <mat-error *ngIf="f['lastName'].errors && f['lastName'].touched">
-              Please enter a valid LastName
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>LastName</mat-label>
+          <input formControlName="lastName" matInput placeholder="LastName">
+          <mat-error *ngIf="f['lastName'].errors && f['lastName'].touched">
+            Please enter a valid LastName
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input formControlName="email" matInput placeholder="Email">
-            <mat-error *ngIf="f['email'].errors && f['email'].touched">
-              Please enter a valid Email Address
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Email">
+          <mat-error *ngIf="f['email'].errors && f['email'].touched">
+            Please enter a valid Email Address
+          </mat-error>
+        </mat-form-field>
       </div>
-    
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Mobile</mat-label>
-            <input formControlName="mobileNumber" matInput placeholder="Mobile">
-            <mat-error *ngIf="f['mobileNumber'].errors && f['mobileNumber'].touched">
-              Please enter a valid Mobile Number
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Mobile</mat-label>
+          <input formControlName="mobileNumber" matInput placeholder="Mobile">
+          <mat-error *ngIf="f['mobileNumber'].errors && f['mobileNumber'].touched">
+            Please enter a valid Mobile Number
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="80" fxLayoutAlign="center end">
-          <button color="primary" mat-raised-button >Update</button>
-        </div>
-      </div> 
-   
-    </form>
-  </div>
- 
+    </div>
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="80" fxLayoutAlign="center end">
+        <button color="primary" mat-raised-button>Update</button>
+      </div>
+    </div>
+  </form>
+</div>
