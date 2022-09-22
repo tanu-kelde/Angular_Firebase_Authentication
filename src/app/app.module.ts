@@ -13,8 +13,8 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import {AvatarModule} from 'primeng/avatar';
-import {AvatarGroupModule} from 'primeng/avatargroup';
+import { AvatarModule} from 'primeng/avatar';
+import { AvatarGroupModule} from 'primeng/avatargroup';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
@@ -29,6 +29,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -62,10 +63,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDatepickerModule,
     MatNativeDateModule,
     NgxPaginationModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AuthenticationModule
   ],
   providers: [AppComponent,
-    AuthService],
+              AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

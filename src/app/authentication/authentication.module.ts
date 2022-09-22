@@ -79,7 +79,7 @@ import { EditStudentComponent } from './edit-student/edit-student.component';
     NgxPaginationModule,
     FlexLayoutModule,
     MatTableModule,
-   
-  ]
+  ],
+  exports: [DashboardComponent]
 })
 export class AuthenticationModule { }

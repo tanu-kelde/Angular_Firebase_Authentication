@@ -18,7 +18,6 @@ export class AddStudentComponent implements OnInit {
   ngOnInit(): void {
     this.crudService.getStudentList();
     this.studentForm();
-   
   }
 
 
