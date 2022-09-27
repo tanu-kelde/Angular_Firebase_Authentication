@@ -12,5 +12,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logOut() {
+    if (confirm('Are you Sure?')) {
+      this.authService.signOut();
+    }
+  }
 }

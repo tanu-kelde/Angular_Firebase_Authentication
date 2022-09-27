@@ -141,13 +141,11 @@ export class AuthService {
   }
 
 
-  // signOut
+  // signOuts
   signOut() {
     return this.angularFireAuth.signOut().then(() => {
-      if (confirm('Are u sure?')) {
-        localStorage.removeItem('user');
-        this.router.navigate(['/sign-in']);
-      }
+      localStorage.removeItem('user');
+      this.router.navigate(['/sign-in']);
     })
   }
 }
