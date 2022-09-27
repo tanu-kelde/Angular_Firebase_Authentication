@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AvatarModule} from 'primeng/avatar';
 import { AvatarGroupModule} from 'primeng/avatargroup';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatButtonModule} from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';    
 import { MatIconModule} from '@angular/material/icon';
 import { MatListModule} from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';

@@ -2,7 +2,7 @@
 table {
     width: 100%;
   }
-  
+ 
   .mat-form-field {
     font-size: 14px;
     width: 100%;
@@ -17,3 +17,7 @@ table {
     border: none;
     color: red;
   }
+
+  /* td, th {
+    width: 25%;
+  } */
