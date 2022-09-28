@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
   userId?: string;
   data: any;
   emailVerified?: boolean;
-  constructor(private authService: AuthService, private formBuilder: FormBuilder, private router: Router,private toastr:ToastrService) { }
+  constructor(public authService: AuthService, private formBuilder: FormBuilder, private router: Router,private toastr:ToastrService) { }
 
   ngOnInit(): void {
     this.reactiveForm = this.formBuilder.group({

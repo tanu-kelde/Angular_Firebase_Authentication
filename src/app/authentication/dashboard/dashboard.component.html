@@ -1,4 +1,4 @@
-<div style="height: 100vh;">
+<!-- <div style="height: 100vh;">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
@@ -27,9 +27,7 @@
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
-  <div class="main">
-    <router-outlet></router-outlet>
-  </div>
+
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav>
       <mat-nav-list>
@@ -54,5 +52,10 @@
         </a>
       </mat-nav-list>
     </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
   </mat-sidenav-container>
-</div>
+</div> -->

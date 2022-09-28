@@ -38,13 +38,12 @@ export class StudentListComponent implements OnInit {
         a['$key'] = item.key;
         this.student.push(a as Student);
       })
+      this.dataSource = new MatTableDataSource(this.student);
     })
   }
 
   dataState() {
     this.crudService.getStudentList().valueChanges().subscribe(data => {
-      this.dataSource = new MatTableDataSource(this.student);
-      // console.log(data)
       this.preLoader = false;
       if (data.length <= 0) {
         this.hideWhenNoStudent = false;
@@ -58,7 +57,7 @@ export class StudentListComponent implements OnInit {
 
   delete(element: any) {
     console.log(element);
-    if (window.confirm('Are sure you want to delete this student ?')) {
+    if (window.confirm('Are you sure you want to delete this student ?')) {
       console.log(element.$key);
       this.crudService.deleteStudent(element.$key);
       this.toastr.success(element.firstName + ' successfully deleted!');

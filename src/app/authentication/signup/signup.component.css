@@ -1,47 +1,8 @@
-/* .container {
-    max-width: 340px;
-    margin: auto;
-    
-  } */
-/* .main {
-  margin-left: 30px;
-  margin-top: 60px
-}
-
-.main input {
-  width: 300px;
-
-}
-
-.container h2 {
-  text-align: center;
-
-}
-
-.main button {
-  width: 300px;
-
-}
-
-.container {
-  background-image: url("../../../assets/images/istockphoto-1318958417-612x612.jpg");
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  height: 600px;
-  border-radius: 20px;
-}
-
-.btn {
-  background-color: rgb(100, 26, 26);
-  color: white;
-}
-input.ng-invalid.ng-touched{
-  border: 1px solid red;
-} */
-
 .main{
   text-align: center;
   margin-top: 40px;
 }
+.google{
+  margin-top: 20px;
+}
+

@@ -15,9 +15,11 @@ export class AddStudentComponent implements OnInit {
   data: any;
   constructor(private formBuilder: FormBuilder, private router: Router, public crudService: CrudService, private toastr: ToastrService) { }
 
+
   ngOnInit(): void {
     this.crudService.getStudentList();
     this.studentForm();
+ 
   }
 
 

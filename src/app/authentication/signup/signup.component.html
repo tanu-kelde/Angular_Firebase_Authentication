@@ -1,116 +1,75 @@
-<!-- <div class="container">
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-        <h2>Signup</h2>
-        <div class="main">
-            <span class="p-float-label">
-                <input id="float-input" type="text" pInputText formControlName="displayName"
-                    [ngClass]="{ 'is-invalid': submitted && f.displayName.errors }">
-                <label for="float-input">Username</label>
-                <span *ngIf="(!f.displayName.valid && f.displayName.touched)" style="color: red;">userName is required</span>
-            </span>
-            <br>
-            <span class="p-float-label">
-                <input id="float-input" type="email" pInputText formControlName="email"
-                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-                <label for="float-input">Email</label>
-                <span *ngIf="(!f.email.valid && f.email.touched)||f.email.errors?.email" style="color: red;">Email is
-                    required</span>
-            </span>
-            <br>
-            <span class="p-float-label">
-                <input id="float-input" type="password" pInputText formControlName="password"
-                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-                <label for="float-input">Password</label>
-                <span *ngIf="(!f.password.valid && f.password.touched) || f.password.errors?.pattern"
-                    style="color: red;">Password is
-                    required</span>
-            </span>
-            <br>
-            <span class="p-float-label">
-                <input id="float-input" type="text" pInputText formControlName="phoneNumber"
-                    [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }">
-                <label for="float-input">Mobile</label>
-                <span *ngIf="(!f.phoneNumber.valid && f.phoneNumber.touched) ||f.phoneNumber.errors?.pattern"
-                    style="color: red;">Mobile is required</span>
-                <div *ngIf="" style="color: red;">Only 10 numeric value allow
-                </div>
-            </span>
-            <br>
-            <span class="p-float-label">
-                <input type="file" id="myfile" name="myfile" pInputText formControlName="photoURL"
-                    [ngClass]="{ 'is-invalid': submitted && f.photoURL.errors }">
-                <span *ngIf="(!f.photoURL.valid && f.photoURL.touched)" style="color: red;">Image is required</span>
-            </span>
-            <br>
-            <br>
-            <button type="submit" class="btn">Signup</button>
-            <br>
-            <br>
-            <span>Already a user? <a routerLink="/sign-in">Login</a> </span>
-        </div>
-    </form>
-</div> -->
 <div class="main">
-    <h1>Student Registration</h1>
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Name</mat-label>
-            <input formControlName="displayName" matInput placeholder="Name">
-            <mat-error *ngIf="reactiveForm.controls.displayName?.errors && reactiveForm.controls.displayName?.touched">
-              Please enter a valid Name
-            </mat-error>
-          </mat-form-field>
-  
-        </div>
+  <h1>Student Registration</h1>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input formControlName="displayName" matInput placeholder="Name">
+          <mat-error *ngIf="reactiveForm.controls.displayName?.errors && reactiveForm.controls.displayName?.touched">
+            Please enter a valid Name
+          </mat-error>
+        </mat-form-field>
       </div>
-     
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input formControlName="email" matInput placeholder="Email">
-            <mat-error *ngIf="reactiveForm.controls.email?.errors && reactiveForm.controls.email?.touched">
-              Please enter a valid Email Address
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Email">
+          <mat-error *ngIf="reactiveForm.controls.email?.errors && reactiveForm.controls.email?.touched">
+            Please enter a valid Email Address
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Password</mat-label>
-            <input formControlName="password" matInput placeholder="Password">
-            <mat-error *ngIf="reactiveForm.controls.password?.errors && reactiveForm.controls.password?.touched">
-              Please enter a valid Password
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput placeholder="Password">
+          <mat-error *ngIf="reactiveForm.controls.password?.errors && reactiveForm.controls.password?.touched">
+            Please enter a valid Password
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="70">
-          <mat-form-field class="example-full-width">
-            <mat-label>Mobile</mat-label>
-            <input formControlName="phoneNumber" matInput placeholder="PhoneNumber">
-            <mat-error *ngIf="reactiveForm.controls.phoneNumber?.errors && reactiveForm.controls.phoneNumber?.touched">
-              Please enter a valid Phone Number
-            </mat-error>
-          </mat-form-field>
-        </div>
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <mat-form-field class="example-full-width">
+          <mat-label>Mobile</mat-label>
+          <input formControlName="phoneNumber" matInput placeholder="PhoneNumber">
+          <mat-error *ngIf="reactiveForm.controls.phoneNumber?.errors && reactiveForm.controls.phoneNumber?.touched">
+            Please enter a valid Phone Number
+          </mat-error>
+        </mat-form-field>
       </div>
-      <div fxLayout="row">
-        <div fxFlexOffset="10" fxFlex="80" fxLayoutAlign="center end">
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlexOffset="10" fxFlex="70">
+        <div fxFlexOffset="5" fxFlex="80" fxLayoutAlign="center">
           <button color="primary" mat-raised-button>Add</button>
         </div>
-        <!-- <div fxFlexOffset="10" fxFlex="80" fxLayoutAlign="center">
-            <button color="primary" mat-raised-button>Reset</button>
-          </div> -->
       </div>
-      <div fxLayout="row" class="google">
-        <div fxFlexOffsest="10" fxFlex="91">
-            <span>Need an account ? <a routerLink="/sign-in"> Signin</a></span>
-        </div>
     </div>
-    </form>
-  </div>
+
+    <div fxLayout="row" class="google">
+      <div fxFlexOffset="10" fxFlex="70">
+        <button mat-raised-button appGoogleSignin (click)="authService.googleAuth()">
+          <img src="../../../assets/images/google.png" width="20" /> Continue with Google
+        </button>
+      </div>
+    </div>
+
+    <div fxLayout="row" class="google">
+      <div fxFlexOffsest="10" fxFlex="91">
+        <span>Need an account ? <a routerLink="/sign-in"> Signin</a></span>
+      </div>
+    </div>
+
+  </form>
+</div>

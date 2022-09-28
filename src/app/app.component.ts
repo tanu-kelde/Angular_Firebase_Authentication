@@ -11,4 +11,9 @@ export class AppComponent {
   title = 'angularfirebase-authentication';
   constructor(public authService: AuthService, public router: Router) {
   }
+  logOut() {
+    if (confirm('Are you Sure?')) {
+      this.authService.signOut();
+    }
+  }
 }

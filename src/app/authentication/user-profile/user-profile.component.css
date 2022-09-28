@@ -1,14 +1,17 @@
-/* .data {
-    text-align: center;
-}  */
-
 .example-card {
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
-    
+   
   }
   
   .example-header-image {
     background-image: url('../../../assets/images/a5e028cb7a4b4b7d7c3c07ae315b60f5.jpg');
     background-size: cover;
+  }
+
+  .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
   }

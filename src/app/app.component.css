@@ -1,7 +1,13 @@
-.example-icon {
+  .example-icon {
     padding: 0 14px;
   }
   
   .example-spacer {
     flex: 1 1 auto;
-  } 
+  }
+
+  a:hover{
+    color: white;
+    background-color:#002ead;
+    transition: 0.7s;
+  }
