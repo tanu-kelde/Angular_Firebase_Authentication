@@ -38,10 +38,12 @@ export class SigninComponent implements OnInit {
     this.authService.SignIn(this.reactiveForm.value.email, this.reactiveForm.value.password).then((result: any) => {
       if (result) {
         console.log(result);
-       this.router.navigate(['dashboard']);
+        this.router.navigate(['dashboard']);
       }
     }).catch(err => {
       console.log(err);
     })
   }
+
+
 }

@@ -6,8 +6,15 @@
     flex: 1 1 auto;
   }
 
-  a:hover{
+  /* a:hover{
     color: white;
     background-color:#002ead;
     transition: 0.7s;
+  } */
+
+  .mat-toolbar-multiple-rows :hover{
+     color: white;
+    background-color:#002ead;
+    transition: 0.7s;
   }
+ 

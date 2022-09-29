@@ -7,6 +7,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
 import { Router } from '@angular/router'
 import { ToastrService } from 'ngx-toastr';
 import { map } from 'rxjs';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -106,7 +107,8 @@ export class AuthService {
 
   // Sign in with google
   googleAuth() {
-    return this.authLogin(new auth.GoogleAuthProvider()).then((res: any) => {
+    return this.authLogin(new auth.GoogleAuthProvider())
+    .then((res: any) => {
       this.router.navigate(['/dashboard']);
     })
   }
@@ -115,11 +117,13 @@ export class AuthService {
   // auth login to run auth provider
   authLogin(provider: any) {
     return this.angularFireAuth.signInWithPopup(provider).then(result => {
+      const user = result.user;
       this.router.navigate(['dashboard']);
       this.setUserData(result.user);
     }).catch(err => {
       window.alert(err.message);
     })
+
   }
 
 

@@ -35,7 +35,8 @@ const routes: Routes = [
   },
   {
     path: "userProfile",
-    component: UserProfileComponent
+    component: UserProfileComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'student-list',
@@ -46,7 +47,7 @@ const routes: Routes = [
     path: 'add-student',
     component: AddStudentComponent,
     canActivate: [AuthGuard]
-  },
+  },     
   {
     path: "edit-student/:id",
     component: EditStudentComponent,

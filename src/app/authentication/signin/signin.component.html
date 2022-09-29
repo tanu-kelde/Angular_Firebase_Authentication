@@ -24,17 +24,26 @@
                 </mat-form-field>
             </div>
         </div>
-        <div fxLayout="row">
+
+        <div fxLayout="row" >
+            <div fxFlexOffset="13" fxFlex="70">
+                <a routerLink="/forgot-password">Forgot Password ?</a>
+            </div>
+        </div>
+
+        <div fxLayout="row" class="google">
             <div fxFlexOffset="10" fxFlex="70">
-                <a routerLink="/forgot-password">Forgot Password ?</a>&nbsp;
-                <button color="primary" mat-raised-button>Login</button>
+                <button color="primary" mat-raised-button style="width: 200px;">Login</button>
             </div>
         </div>
 
         <div fxLayout="row" class="google">
             <div fxFlexOffset="10" fxFlex="70">
                 <button mat-raised-button appGoogleSignin (click)="authService.googleAuth()">
-                    <img src="../../../assets/images/google.png" width="20" />    Login with Google
+                    <div> 
+                        <img src="../../../assets/images/google.png" width="16" />
+                        Login with Google
+                    </div>
                 </button>
             </div>
         </div>
